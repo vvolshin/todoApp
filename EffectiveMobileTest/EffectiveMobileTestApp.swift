@@ -1,20 +1,16 @@
-//
-//  EffectiveMobileTestApp.swift
-//  EffectiveMobileTest
-//
-//  Created by Vitaly Volshin on 24/7/25.
-//
-
 import SwiftUI
 
 @main
 struct EffectiveMobileTestApp: App {
-    let persistenceController = PersistenceController.shared
+	@StateObject private var router = Router()
 
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
-    }
+	var body: some Scene {
+		WindowGroup {
+			NavigationStack(path: $router.path) {
+				MainListView()
+                    .navigationDestination(for: Route.self) { route in route.view }
+            }
+            .environmentObject(router)
+		}
+	}
 }

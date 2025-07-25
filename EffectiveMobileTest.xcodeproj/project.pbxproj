@@ -6,17 +6,46 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F8F84EE72E328727003BC461 /* TodoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EE12E328727003BC461 /* TodoModel.xcdatamodeld */; };
+		F8F84EE82E328727003BC461 /* EffectiveMobileTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EE22E328727003BC461 /* EffectiveMobileTestApp.swift */; };
+		F8F84EEA2E328727003BC461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F84EDF2E328727003BC461 /* Assets.xcassets */; };
+		F8F84EF02E328810003BC461 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EEF2E328810003BC461 /* Router.swift */; };
+		F8F84EF32E328832003BC461 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EF22E328832003BC461 /* Route.swift */; };
+		F8F84EF72E3288C3003BC461 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EF62E3288C1003BC461 /* MainListView.swift */; };
+		F8F84EF92E3288D2003BC461 /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EF82E3288D1003BC461 /* TaskDetailsView.swift */; };
+		F8F84EFB2E328E6B003BC461 /* TodoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EFA2E328E4F003BC461 /* TodoResponse.swift */; };
+		F8F84F052E328E89003BC461 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EFF2E328E89003BC461 /* NetworkError.swift */; };
+		F8F84F062E328E89003BC461 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84EFE2E328E89003BC461 /* NetworkAgent.swift */; };
+		F8F84F0C2E32929B003BC461 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84F0B2E329297003BC461 /* CoreDataManager.swift */; };
+		F8F84F0E2E32934E003BC461 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84F0D2E32934B003BC461 /* TodoManager.swift */; };
+		F8F84F102E3293AE003BC461 /* TodoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F84F0F2E3293AA003BC461 /* TodoVM.swift */; };
+		F8FA2E662E32A71C0064AD7B /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E652E32A71B0064AD7B /* NewTaskView.swift */; };
+		F8FA2E692E32AA920064AD7B /* BottomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E682E32AA890064AD7B /* BottomToolbar.swift */; };
+		F8FA2E6B2E32AB4C0064AD7B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E6A2E32AB4B0064AD7B /* SearchView.swift */; };
+		F8FA2E6D2E32B7340064AD7B /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E6C2E32B7330064AD7B /* TaskEditView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F8F84ECC2E328702003BC461 /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F84EDF2E328727003BC461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8F84EE22E328727003BC461 /* EffectiveMobileTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectiveMobileTestApp.swift; sourceTree = "<group>"; };
+		F8F84EE52E328727003BC461 /* TodoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TodoModel.xcdatamodel; sourceTree = "<group>"; };
+		F8F84EEF2E328810003BC461 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F8F84EF22E328832003BC461 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		F8F84EF62E3288C1003BC461 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		F8F84EF82E3288D1003BC461 /* TaskDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsView.swift; sourceTree = "<group>"; };
+		F8F84EFA2E328E4F003BC461 /* TodoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoResponse.swift; sourceTree = "<group>"; };
+		F8F84EFE2E328E89003BC461 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
+		F8F84EFF2E328E89003BC461 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F8F84F0B2E329297003BC461 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F8F84F0D2E32934B003BC461 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		F8F84F0F2E3293AA003BC461 /* TodoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVM.swift; sourceTree = "<group>"; };
+		F8FA2E652E32A71B0064AD7B /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		F8FA2E682E32AA890064AD7B /* BottomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolbar.swift; sourceTree = "<group>"; };
+		F8FA2E6A2E32AB4B0064AD7B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F8FA2E6C2E32B7330064AD7B /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F8F84ECE2E328702003BC461 /* EffectiveMobileTest */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EffectiveMobileTest;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F8F84EC92E328702003BC461 /* Frameworks */ = {
@@ -32,7 +61,7 @@
 		F8F84EC32E328702003BC461 = {
 			isa = PBXGroup;
 			children = (
-				F8F84ECE2E328702003BC461 /* EffectiveMobileTest */,
+				F8F84EE42E328727003BC461 /* EffectiveMobileTest */,
 				F8F84ECD2E328702003BC461 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +72,102 @@
 				F8F84ECC2E328702003BC461 /* EffectiveMobileTest.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F8F84EE42E328727003BC461 /* EffectiveMobileTest */ = {
+			isa = PBXGroup;
+			children = (
+				F8FA2E672E32AA7F0064AD7B /* Components */,
+				F8F84EEF2E328810003BC461 /* Router.swift */,
+				F8F84EEE2E328776003BC461 /* Database */,
+				F8F84EED2E32876C003BC461 /* Resources */,
+				F8F84EEC2E32874F003BC461 /* Network */,
+				F8F84EEB2E328740003BC461 /* MVVM */,
+				F8F84EE22E328727003BC461 /* EffectiveMobileTestApp.swift */,
+			);
+			path = EffectiveMobileTest;
+			sourceTree = "<group>";
+		};
+		F8F84EEB2E328740003BC461 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84EF52E3288BC003BC461 /* Views */,
+				F8F84EF42E3288B4003BC461 /* ViewModels */,
+				F8F84EF12E32882F003BC461 /* Model */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		F8F84EEC2E32874F003BC461 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84F012E328E89003BC461 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F8F84EED2E32876C003BC461 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84EDF2E328727003BC461 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F8F84EEE2E328776003BC461 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84F0D2E32934B003BC461 /* TodoManager.swift */,
+				F8F84F0B2E329297003BC461 /* CoreDataManager.swift */,
+				F8F84EE12E328727003BC461 /* TodoModel.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F8F84EF12E32882F003BC461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84EFA2E328E4F003BC461 /* TodoResponse.swift */,
+				F8F84EF22E328832003BC461 /* Route.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8F84EF42E3288B4003BC461 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84F0F2E3293AA003BC461 /* TodoVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F8F84EF52E3288BC003BC461 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F8FA2E6C2E32B7330064AD7B /* TaskEditView.swift */,
+				F8FA2E6A2E32AB4B0064AD7B /* SearchView.swift */,
+				F8FA2E652E32A71B0064AD7B /* NewTaskView.swift */,
+				F8F84EF82E3288D1003BC461 /* TaskDetailsView.swift */,
+				F8F84EF62E3288C1003BC461 /* MainListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F8F84F012E328E89003BC461 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F8F84EFE2E328E89003BC461 /* NetworkAgent.swift */,
+				F8F84EFF2E328E89003BC461 /* NetworkError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F8FA2E672E32AA7F0064AD7B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F8FA2E682E32AA890064AD7B /* BottomToolbar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +184,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F8F84ECE2E328702003BC461 /* EffectiveMobileTest */,
 			);
 			name = EffectiveMobileTest;
 			packageProductDependencies = (
@@ -109,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F84EEA2E328727003BC461 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +242,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F84EE72E328727003BC461 /* TodoModel.xcdatamodeld in Sources */,
+				F8FA2E6D2E32B7340064AD7B /* TaskEditView.swift in Sources */,
+				F8F84EF72E3288C3003BC461 /* MainListView.swift in Sources */,
+				F8F84EF02E328810003BC461 /* Router.swift in Sources */,
+				F8F84F102E3293AE003BC461 /* TodoVM.swift in Sources */,
+				F8F84EF92E3288D2003BC461 /* TaskDetailsView.swift in Sources */,
+				F8F84EFB2E328E6B003BC461 /* TodoResponse.swift in Sources */,
+				F8F84EF32E328832003BC461 /* Route.swift in Sources */,
+				F8FA2E662E32A71C0064AD7B /* NewTaskView.swift in Sources */,
+				F8F84F0C2E32929B003BC461 /* CoreDataManager.swift in Sources */,
+				F8F84EE82E328727003BC461 /* EffectiveMobileTestApp.swift in Sources */,
+				F8F84F0E2E32934E003BC461 /* TodoManager.swift in Sources */,
+				F8FA2E6B2E32AB4C0064AD7B /* SearchView.swift in Sources */,
+				F8F84F052E328E89003BC461 /* NetworkError.swift in Sources */,
+				F8FA2E692E32AA920064AD7B /* BottomToolbar.swift in Sources */,
+				F8F84F062E328E89003BC461 /* NetworkAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +463,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F8F84EE12E328727003BC461 /* TodoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F8F84EE52E328727003BC461 /* TodoModel.xcdatamodel */,
+			);
+			currentVersion = F8F84EE52E328727003BC461 /* TodoModel.xcdatamodel */;
+			path = TodoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F8F84EC42E328702003BC461 /* Project object */;
 }
