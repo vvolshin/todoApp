@@ -36,10 +36,10 @@ extension NewTaskView {
 		guard !todoText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else { return }
 
 		let task = TodoItem(
-			id: Int.random(in: Int.min...Int.max),
+			id: Int.random(in: 100...150),
 			todo: todoText,
 			completed: false,
-			userId: Int.random(in: Int.min...Int.max)
+			userId: Int.random(in: 100...150)
 		)
 
         viewModel.saveTaskToCoreData(task)
