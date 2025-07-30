@@ -7,7 +7,7 @@ struct TodoResponse: Codable {
     let limit: Int
 }
 
-struct TodoItem: Identifiable {
+struct TodoItem: Identifiable, Hashable {
     let id: Int
     var todo: String
     var completed: Bool

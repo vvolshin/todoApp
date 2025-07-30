@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct BottomToolbarModifier: ViewModifier {
+struct MainListToolbarModifier: ViewModifier {
     let taskCount: Int
     let onNewTask: () -> Void
 
@@ -29,7 +29,7 @@ struct BottomToolbarModifier: ViewModifier {
 }
 
 extension View {
-    func bottomToolbar(taskCount: Int, onNewTask: @escaping () -> Void) -> some View {
-        self.modifier(BottomToolbarModifier(taskCount: taskCount, onNewTask: onNewTask))
+    func mainListToolbar(taskCount: Int, onNewTask: @escaping () -> Void) -> some View {
+        self.modifier(MainListToolbarModifier(taskCount: taskCount, onNewTask: onNewTask))
     }
 }

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct MainListView: View {
 	@EnvironmentObject var router: Router
-	@StateObject private var viewModel = TodoViewModel()
+	@StateObject private var viewModel = MainListVM()
 	@AppStorage("didFetchTodos") private var didFetchTodos = false
 
 	// MARK: - Body
@@ -13,7 +13,7 @@ struct MainListView: View {
 			tasksArea()
 			Spacer()
 		}
-		.bottomToolbar(taskCount: viewModel.todos.count) {
+		.mainListToolbar(taskCount: viewModel.todos.count) {
 			router.go(to: .newTaskView)
 		}
 		.onAppear {
@@ -28,7 +28,7 @@ struct MainListView: View {
 	}
 }
 
-// MARK: - Components
+// MARK: - View components
 extension MainListView {
 	private func title() -> some View {
 		HStack {
@@ -76,80 +76,62 @@ extension MainListView {
 	}
 
 	private func tasksArea() -> some View {
-		List(viewModel.todos) { todo in
+		List($viewModel.todos, id: \.id) { $todo in
 			HStack(alignment: .top, spacing: 12) {
-				checkButton(todo: todo)
-				singleTask(todo: todo)
+				CheckButton(completed: $todo.completed) {
+					viewModel.toggleTodo(todo)
+				}
+				singleTaskContent(todo: todo)
 			}
 			.padding(.vertical, 8)
-            .contextMenu {
-                Button {
-                    router.go(to: .taskEditView)
-                } label: {
-                    Label("Редактировать", systemImage: "square.and.pencil")
-                }
-                
-                ShareLink(item: todo.todo) {
-                    Label("Поделиться", systemImage: "square.and.arrow.up")
-                }
-
-                Button(role: .destructive) {
-                    viewModel.deleteTodo(todo)
-                } label: {
-                    Label("Удалить", systemImage: "trash")
-                }
-            }
-		}
-        .refreshable {
-            viewModel.deleteAllTodosFromCoreData()
-            viewModel.fetchAndStoreTodos()
-        }
-	}
-
-	private func singleTask(todo: TodoItem) -> some View {
-		VStack(alignment: .leading, spacing: 4) {
-			HStack {
-				Text("ID: \(todo.id)")
-					.font(.system(size: 16))
-					.fontWeight(todo.completed ? .regular : .bold)
-					.strikethrough(todo.completed, color: .gray)
-					.foregroundStyle(todo.completed ? .white.opacity(0.5) : .white)
-				Spacer()
+			.contextMenu {
+				TodoContextMenu(todo: todo, viewModel: viewModel, router: router)
 			}
-
-			Text(todo.todo)
-				.font(.system(size: 12))
-				.fontWeight(.regular)
-				.foregroundStyle(todo.completed ? .white.opacity(0.5) : .white)
-
-			Text(formatDate(todo.date))
-				.font(.system(size: 12))
-				.fontWeight(.regular)
-				.foregroundStyle(.white.opacity(0.5))
 		}
-	}
-
-	private func checkButton(todo: TodoItem) -> some View {
-		Button(
-			action: {
-				viewModel.toggleTodo(todo)
-			},
-			label: {
-				Image(systemName: todo.completed ? "checkmark.circle" : "circle")
-					.resizable()
-					.scaledToFit()
-					.frame(width: 24, height: 24)
-					.foregroundColor(todo.completed ? .yellow : .gray)
-			})
-	}
-
-	private func formatDate(_ date: Date) -> String {
-		let formatter = DateFormatter()
-		formatter.dateFormat = "dd/MM/yyyy"
-		return formatter.string(from: date)
+		.refreshable {
+			viewModel.deleteAllTodosFromCoreData()
+			viewModel.fetchAndStoreTodos()
+		}
 	}
 }
 
+// MARK: - List row components
+extension MainListView {
+	private func singleTaskContent(todo: TodoItem) -> some View {
+		VStack(alignment: .leading, spacing: 4) {
+			taskIdText(todo: todo)
+			taskTodoText(todo)
+			taskDateText(todo)
+		}
+	}
+
+	private func taskIdText(todo: TodoItem) -> some View {
+		HStack {
+			Text("ID: \(todo.id)")
+				.font(.system(size: 16))
+				.fontWeight(todo.completed ? .regular : .bold)
+				.strikethrough(todo.completed, color: .gray)
+				.foregroundStyle(todo.completed ? .white.opacity(0.5) : .white)
+			Spacer()
+		}
+	}
+
+	private func taskTodoText(_ todo: TodoItem) -> some View {
+		Text(todo.todo)
+			.font(.system(size: 12))
+			.fontWeight(.regular)
+			.foregroundStyle(todo.completed ? .white.opacity(0.5) : .white)
+	}
+
+	private func taskDateText(_ todo: TodoItem) -> some View {
+		Text(todo.date.formatDate())
+			.font(.system(size: 12))
+			.fontWeight(.regular)
+			.foregroundStyle(.white.opacity(0.5))
+	}
+}
+
+// MARK: - Preview
 #Preview {
 	NavigationStack {
 		MainListView()

@@ -8,9 +8,9 @@ struct EffectiveMobileTestApp: App {
 		WindowGroup {
 			NavigationStack(path: $router.path) {
 				MainListView()
-                    .navigationDestination(for: Route.self) { route in route.view }
-            }
-            .environmentObject(router)
+					.navigationDestination(for: Route.self) { route in route.view }
+			}
+			.environmentObject(router)
 		}
 	}
 }

@@ -2,9 +2,10 @@ import SwiftUI
 
 struct SearchView: View {
     @EnvironmentObject var router: Router
-    @StateObject var viewModel = TodoViewModel()
+    @StateObject var viewModel = SearchViewModel()
     @FocusState private var isTextFieldFocused: Bool
     
+    // MARK: - Body
     var body: some View {
         VStack {
             TextField("Enter query", text: $viewModel.searchQuery)
@@ -47,9 +48,15 @@ struct SearchView: View {
                 })
             }
         }
+        .onChange(of: viewModel.searchQuery) {
+            Task {
+                try? viewModel.searchTasks(by: viewModel.searchQuery)
+            }
+        }
     }
 }
 
+// MARK: - Preview
 #Preview {
     NavigationStack {
         SearchView()

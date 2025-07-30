@@ -7,7 +7,7 @@ struct NetworkAgent {
 
 	private let baseURL = "https://dummyjson.com"
 
-	func fetchTodos() -> AnyPublisher<[TodoItem], NetworkError> {
+	func fetchTodos() -> AnyPublisher<[TodoItem], NetworkErrors> {
 		guard let url = URL(string: "\(baseURL)/todos") else {
 			return Fail(error: .invalidURL).eraseToAnyPublisher()
 		}
@@ -17,7 +17,7 @@ struct NetworkAgent {
 				guard let httpResponse = response as? HTTPURLResponse,
 					(200...299).contains(httpResponse.statusCode)
 				else {
-					throw NetworkError.badServerResponse
+					throw NetworkErrors.badServerResponse
 				}
 				return data
 			}
@@ -25,10 +25,9 @@ struct NetworkAgent {
 			.map { $0.todos }
 			.mapError { error in
 				if let decodingError = error as? DecodingError {
-					print("Decoding failed: \(decodingError)")
-					return .decodingError
+					return .decodingError(error)
 				}
-				else if let networkError = error as? NetworkError {
+				else if let networkError = error as? NetworkErrors {
 					return networkError
 				}
 				else {
