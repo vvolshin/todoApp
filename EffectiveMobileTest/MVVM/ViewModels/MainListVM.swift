@@ -5,12 +5,21 @@ final class MainListVM: ObservableObject {
 	@Published var todos: [TodoItem] = []
 
 	private var cancellables = Set<AnyCancellable>()
-	private let coreDataManager = CoreDataManager.shared
+	private let coreDataManager: CoreDataManagerProtocol
+	private let networkAgent: NetworkAgentProtocol
+
+	init(
+		networkAgent: NetworkAgentProtocol = NetworkAgent.shared,
+		coreDataManager: CoreDataManagerProtocol = CoreDataManager.shared
+	) {
+		self.networkAgent = networkAgent
+		self.coreDataManager = coreDataManager
+	}
 
 	func fetchAndStoreTodos() {
-		NetworkAgent.shared.fetchTodos()
+		networkAgent.fetchTodos()
 			.subscribe(on: DispatchQueue.global(qos: .background))
-			.handleEvents(receiveOutput: { [weak self] items in
+			.handleEvents(receiveOutput: { [weak self] (items: [TodoItem]) in
 				guard let self = self else { return }
 				do {
 					try coreDataManager.saveTodos(items)
@@ -30,14 +39,9 @@ final class MainListVM: ObservableObject {
 			.store(in: &cancellables)
 	}
 
-	func loadFromCoreData() {
-		do {
-			todos = try coreDataManager.fetchTodos()
-		}
-		catch {
-			print(CoreDataErrors.failedToLoad(error).description)
-		}
-	}
+    func loadFromCoreData() throws {
+        todos = try coreDataManager.fetchTodos()
+    }
 
 	func toggleTodo(_ todo: TodoItem) {
 		if let index = todos.firstIndex(where: { $0.id == todo.id }) {
@@ -62,13 +66,8 @@ final class MainListVM: ObservableObject {
 		}
 	}
 
-	func deleteTodo(_ todo: TodoItem) {
-		todos.removeAll { $0.id == todo.id }
-		do {
-			try coreDataManager.deleteTodo(todo)
-		}
-		catch {
-			print(CoreDataErrors.failedToDelete(error).description)
-		}
-	}
+    func deleteTodo(_ todo: TodoItem) throws {
+        try coreDataManager.deleteTodo(todo)
+        todos.removeAll(where: { $0.id == todo.id })
+    }
 }

@@ -1,7 +1,7 @@
 import Combine
 import Foundation
 
-struct NetworkAgent {
+final class NetworkAgent: NetworkAgentProtocol {
 	static let shared = NetworkAgent()
 	private init() {}
 
@@ -24,7 +24,7 @@ struct NetworkAgent {
 			.decode(type: TodoResponse.self, decoder: JSONDecoder())
 			.map { $0.todos }
 			.mapError { error in
-				if let decodingError = error as? DecodingError {
+                if error is DecodingError {
 					return .decodingError(error)
 				}
 				else if let networkError = error as? NetworkErrors {

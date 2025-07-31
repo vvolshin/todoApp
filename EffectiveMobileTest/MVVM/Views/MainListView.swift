@@ -22,7 +22,7 @@ struct MainListView: View {
 				didFetchTodos = true
 			}
 			else {
-				viewModel.loadFromCoreData()
+				try? viewModel.loadFromCoreData()
 			}
 		}
 	}

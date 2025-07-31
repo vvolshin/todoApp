@@ -30,7 +30,25 @@
 		F8FA2E7C2E3A370C0064AD7B /* NewTaskVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E7B2E3A37020064AD7B /* NewTaskVM.swift */; };
 		F8FA2E7E2E3A533F0064AD7B /* EditTaskVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E7D2E3A53340064AD7B /* EditTaskVM.swift */; };
 		F8FA2E852E3A7A600064AD7B /* CoreDataErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E842E3A7A5B0064AD7B /* CoreDataErrors.swift */; };
+		F8FA2E952E3A8EA20064AD7B /* MainListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E932E3A8EA20064AD7B /* MainListVMTests.swift */; };
+		F8FA2E972E3AFF280064AD7B /* NetworkAgentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E962E3AFF1D0064AD7B /* NetworkAgentProtocol.swift */; };
+		F8FA2E992E3B05860064AD7B /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E982E3B057C0064AD7B /* CoreDataManagerProtocol.swift */; };
+		F8FA2E9C2E3B09C20064AD7B /* MockNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E9B2E3B09C10064AD7B /* MockNetworkAgent.swift */; };
+		F8FA2E9E2E3B0A120064AD7B /* MockCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E9D2E3B0A100064AD7B /* MockCoreDataManager.swift */; };
+		F8FA2EA02E3B0A730064AD7B /* SearchVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2E9F2E3B0A660064AD7B /* SearchVMTests.swift */; };
+		F8FA2EA22E3B26210064AD7B /* NewTaskVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2EA12E3B26170064AD7B /* NewTaskVMTests.swift */; };
+		F8FA2EA42E3B9BC40064AD7B /* EditTaskVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FA2EA32E3B9BBB0064AD7B /* EditTaskVMTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8FA2E8E2E3A8E990064AD7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F84EC42E328702003BC461 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8F84ECB2E328702003BC461;
+			remoteInfo = EffectiveMobileTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F8F84ECC2E328702003BC461 /* EffectiveMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EffectiveMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,10 +75,26 @@
 		F8FA2E7B2E3A37020064AD7B /* NewTaskVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVM.swift; sourceTree = "<group>"; };
 		F8FA2E7D2E3A53340064AD7B /* EditTaskVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVM.swift; sourceTree = "<group>"; };
 		F8FA2E842E3A7A5B0064AD7B /* CoreDataErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataErrors.swift; sourceTree = "<group>"; };
+		F8FA2E8A2E3A8E990064AD7B /* EMUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8FA2E932E3A8EA20064AD7B /* MainListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListVMTests.swift; sourceTree = "<group>"; };
+		F8FA2E962E3AFF1D0064AD7B /* NetworkAgentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgentProtocol.swift; sourceTree = "<group>"; };
+		F8FA2E982E3B057C0064AD7B /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
+		F8FA2E9B2E3B09C10064AD7B /* MockNetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkAgent.swift; sourceTree = "<group>"; };
+		F8FA2E9D2E3B0A100064AD7B /* MockCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataManager.swift; sourceTree = "<group>"; };
+		F8FA2E9F2E3B0A660064AD7B /* SearchVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVMTests.swift; sourceTree = "<group>"; };
+		F8FA2EA12E3B26170064AD7B /* NewTaskVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskVMTests.swift; sourceTree = "<group>"; };
+		F8FA2EA32E3B9BBB0064AD7B /* EditTaskVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskVMTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F8F84EC92E328702003BC461 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8FA2E872E3A8E990064AD7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -82,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F8F84ECC2E328702003BC461 /* EffectiveMobileTest.app */,
+				F8FA2E8A2E3A8E990064AD7B /* EMUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +128,7 @@
 				F8FA2E812E3A777E0064AD7B /* Core */,
 				F8F84EEE2E328776003BC461 /* Data */,
 				F8F84EEB2E328740003BC461 /* MVVM */,
+				F8FA2E942E3A8EA20064AD7B /* Tests */,
 				F8F84EED2E32876C003BC461 /* Resources */,
 			);
 			path = EffectiveMobileTest;
@@ -112,6 +148,7 @@
 		F8F84EEC2E32874F003BC461 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F8FA2E962E3AFF1D0064AD7B /* NetworkAgentProtocol.swift */,
 				F8F84EFE2E328E89003BC461 /* NetworkAgent.swift */,
 				F8F84EFF2E328E89003BC461 /* NetworkErrors.swift */,
 			);
@@ -213,11 +250,33 @@
 		F8FA2E832E3A78260064AD7B /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				F8FA2E982E3B057C0064AD7B /* CoreDataManagerProtocol.swift */,
 				F8F84EE12E328727003BC461 /* TodoModel.xcdatamodeld */,
 				F8FA2E842E3A7A5B0064AD7B /* CoreDataErrors.swift */,
 				F8F84F0B2E329297003BC461 /* CoreDataManager.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		F8FA2E942E3A8EA20064AD7B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F8FA2EA32E3B9BBB0064AD7B /* EditTaskVMTests.swift */,
+				F8FA2EA12E3B26170064AD7B /* NewTaskVMTests.swift */,
+				F8FA2E9F2E3B0A660064AD7B /* SearchVMTests.swift */,
+				F8FA2E932E3A8EA20064AD7B /* MainListVMTests.swift */,
+				F8FA2E9A2E3B09B40064AD7B /* Mocks */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F8FA2E9A2E3B09B40064AD7B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F8FA2E9D2E3B0A100064AD7B /* MockCoreDataManager.swift */,
+				F8FA2E9B2E3B09C10064AD7B /* MockNetworkAgent.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +301,26 @@
 			productReference = F8F84ECC2E328702003BC461 /* EffectiveMobileTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F8FA2E892E3A8E990064AD7B /* EMUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8FA2E902E3A8E990064AD7B /* Build configuration list for PBXNativeTarget "EMUnitTests" */;
+			buildPhases = (
+				F8FA2E862E3A8E990064AD7B /* Sources */,
+				F8FA2E872E3A8E990064AD7B /* Frameworks */,
+				F8FA2E882E3A8E990064AD7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8FA2E8F2E3A8E990064AD7B /* PBXTargetDependency */,
+			);
+			name = EMUnitTests;
+			packageProductDependencies = (
+			);
+			productName = EMUnitTests;
+			productReference = F8FA2E8A2E3A8E990064AD7B /* EMUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +333,10 @@
 				TargetAttributes = {
 					F8F84ECB2E328702003BC461 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					F8FA2E892E3A8E990064AD7B = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = F8F84ECB2E328702003BC461;
 					};
 				};
 			};
@@ -272,6 +355,7 @@
 			projectRoot = "";
 			targets = (
 				F8F84ECB2E328702003BC461 /* EffectiveMobileTest */,
+				F8FA2E892E3A8E990064AD7B /* EMUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8F84EEA2E328727003BC461 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8FA2E882E3A8E990064AD7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,9 +387,11 @@
 				F8FA2E6D2E32B7340064AD7B /* EditTaskView.swift in Sources */,
 				F8FA2E732E3326080064AD7B /* CheckButton.swift in Sources */,
 				F8F84EF72E3288C3003BC461 /* MainListView.swift in Sources */,
+				F8FA2E972E3AFF280064AD7B /* NetworkAgentProtocol.swift in Sources */,
 				F8F84EF02E328810003BC461 /* Router.swift in Sources */,
 				F8F84F102E3293AE003BC461 /* MainListVM.swift in Sources */,
 				F8FA2E782E3362D50064AD7B /* Data.swift in Sources */,
+				F8FA2E992E3B05860064AD7B /* CoreDataManagerProtocol.swift in Sources */,
 				F8F84EFB2E328E6B003BC461 /* TodoResponse.swift in Sources */,
 				F8FA2E7E2E3A533F0064AD7B /* EditTaskVM.swift in Sources */,
 				F8F84EF32E328832003BC461 /* Route.swift in Sources */,
@@ -317,7 +410,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8FA2E862E3A8E990064AD7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8FA2EA22E3B26210064AD7B /* NewTaskVMTests.swift in Sources */,
+				F8FA2E9E2E3B0A120064AD7B /* MockCoreDataManager.swift in Sources */,
+				F8FA2EA02E3B0A730064AD7B /* SearchVMTests.swift in Sources */,
+				F8FA2E9C2E3B09C20064AD7B /* MockNetworkAgent.swift in Sources */,
+				F8FA2E952E3A8EA20064AD7B /* MainListVMTests.swift in Sources */,
+				F8FA2EA42E3B9BC40064AD7B /* EditTaskVMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8FA2E8F2E3A8E990064AD7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8F84ECB2E328702003BC461 /* EffectiveMobileTest */;
+			targetProxy = F8FA2E8E2E3A8E990064AD7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F8F84EDA2E328704003BC461 /* Debug */ = {
@@ -497,6 +611,42 @@
 			};
 			name = Release;
 		};
+		F8FA2E912E3A8E990064AD7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JCJC2M47X2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Vitaly-Volshin.EMUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveMobileTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EffectiveMobileTest";
+			};
+			name = Debug;
+		};
+		F8FA2E922E3A8E990064AD7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JCJC2M47X2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Vitaly-Volshin.EMUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EffectiveMobileTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EffectiveMobileTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,6 +664,15 @@
 			buildConfigurations = (
 				F8F84EDD2E328704003BC461 /* Debug */,
 				F8F84EDE2E328704003BC461 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8FA2E902E3A8E990064AD7B /* Build configuration list for PBXNativeTarget "EMUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8FA2E912E3A8E990064AD7B /* Debug */,
+				F8FA2E922E3A8E990064AD7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

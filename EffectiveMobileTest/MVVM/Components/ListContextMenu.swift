@@ -19,7 +19,7 @@ struct TodoContextMenu: View {
 
             Button(role: .destructive) {
                 withAnimation {
-                    viewModel.deleteTodo(todo)
+                    try? viewModel.deleteTodo(todo)
                 }
             } label: {
                 Label("Удалить", systemImage: "trash")

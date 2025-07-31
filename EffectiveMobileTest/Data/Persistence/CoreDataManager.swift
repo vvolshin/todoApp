@@ -1,6 +1,6 @@
 import CoreData
 
-final class CoreDataManager {
+final class CoreDataManager: CoreDataManagerProtocol {
 	static let shared = CoreDataManager()
 
 	let container: NSPersistentContainer

@@ -1,14 +1,18 @@
 import CoreData
 
 final class NewTaskVM: ObservableObject {
-	private let coreDataManager = CoreDataManager.shared
+    @Published var todos: [TodoItem] = []
+    private let coreDataManager: CoreDataManagerProtocol
+    
+    init(coreDataManager: CoreDataManagerProtocol = CoreDataManager.shared) {
+        self.coreDataManager = coreDataManager
+    }
 
-	func saveTaskToCoreData(_ task: TodoItem) {
-		do {
-			try coreDataManager.saveTodo(task)
-		}
-		catch {
-			print(CoreDataErrors.failedToSave(error).description)
-		}
+	func saveTaskToCoreData(_ task: TodoItem) throws {
+        try coreDataManager.saveTodo(task)
 	}
+    
+    func loadFromCoreData() throws {
+        todos = try coreDataManager.fetchTodos()
+    }
 }

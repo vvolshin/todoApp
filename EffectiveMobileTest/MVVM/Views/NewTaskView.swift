@@ -42,7 +42,7 @@ extension NewTaskView {
 			userId: Int.random(in: 100...150)
 		)
 
-        viewModel.saveTaskToCoreData(task)
+        try? viewModel.saveTaskToCoreData(task)
 		router.goBack()
 	}
 }

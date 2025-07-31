@@ -1,13 +1,18 @@
 import CoreData
 
 final class EditTaskVM: ObservableObject {
-	private let coreDataManager = CoreDataManager.shared
+    @Published var todos: [TodoItem] = []
+	private let coreDataManager: CoreDataManagerProtocol
+
+	init(coreDataManager: CoreDataManagerProtocol = CoreDataManager.shared) {
+		self.coreDataManager = coreDataManager
+	}
+
+    func updateTodo(_ todo: TodoItem, newTodo: String) throws {
+        try coreDataManager.updateTodo(todo, newTodo: newTodo)
+    }
     
-    func updateTodo(_ todo: TodoItem, newTodo: String) {
-        do {
-            try coreDataManager.updateTodo(todo, newTodo: newTodo)
-        } catch {
-            print(CoreDataErrors.failedToUpdate(error).description)
-        }
+    func loadFromCoreData() throws {
+        todos = try coreDataManager.fetchTodos()
     }
 }

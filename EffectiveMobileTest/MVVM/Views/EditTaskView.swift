@@ -34,7 +34,7 @@ struct EditTaskView: View {
 		.editViewToolbar(
 			onBack: { router.goBack() },
             onSave: {
-                viewModel.updateTodo(task, newTodo: todo)
+                try? viewModel.updateTodo(task, newTodo: todo)
                 router.goBack()
             })
         .onAppear {

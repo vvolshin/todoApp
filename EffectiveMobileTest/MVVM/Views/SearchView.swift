@@ -2,7 +2,7 @@ import SwiftUI
 
 struct SearchView: View {
     @EnvironmentObject var router: Router
-    @StateObject var viewModel = SearchViewModel()
+    @StateObject var viewModel = SearchVM()
     @FocusState private var isTextFieldFocused: Bool
     
     // MARK: - Body
