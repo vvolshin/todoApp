@@ -1,9 +1,5 @@
 # Приложение TodoList
-<div align="center">
-  <a href="Resources/todoShowcase.mp4">
-    <img src="https://img.youtube.com/vi/VIDEO_ID/0.jpg" alt="TodoList Showcase" />
-  </a>
-</div>
+![](https://github.com/user-attachments/assets/98de05c0-c32f-4fb0-ac64-b2f92589fb7c)
 
 ## Стек
 - Swift 5
