@@ -1,5 +1,7 @@
 # Приложение TodoList
-![](https://github.com/user-attachments/assets/98de05c0-c32f-4fb0-ac64-b2f92589fb7c)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/98de05c0-c32f-4fb0-ac64-b2f92589fb7c" alt="iPhone Screencast" width="300" height="650" />
+</div>
 
 ## Стек
 - Swift 5
